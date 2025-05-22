@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+         <!-- load stylesheets -->
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+         <link rel="stylesheet" href="static/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+         <link rel="stylesheet" href="static/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+         <link rel="stylesheet" type="text/css" href="static/css/datepicker.css"/>
+         <link rel="stylesheet" type="text/css" href="static/slick/slick.css"/>
+         <link rel="stylesheet" type="text/css" href="static/slick/slick-theme.css"/>
+         <link rel="stylesheet" href="static/css/templatemo-style.css">  
+         
+         
+         
+         <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f9;
+            }
+    
+            h1 {
+                text-align: center;
+                color: #333;
+                margin: 20px 0;
+            }
+    
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+                color:black;
+                font-size: large;
+                font-weight: bold;
+            }
+    
+            .image-card {
+                flex: 0 1 calc(50% - 20px); /* Two images per row with spacing */
+                box-sizing: border-box;
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                text-align: center;
+            }
+    
+            .image-card img {
+                width: 100%;
+                height: auto;
+                min-width: 300px; /* Minimum width */
+                min-height: 200px; /* Minimum height */
+                object-fit: contain; /* Ensure image aspect ratio is preserved */
+            }
+    
+            @media (max-width: 768px) {
+                .image-card {
+                    flex: 0 1 calc(100% - 20px); /* One image per row on smaller screens */
+                }
+            }
+            .right-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.right-first-image {
+    width: 100%;
+    max-width: 800px; /* Limits the max width of the entire block */
+    background-color: #f4f4f4; /* Optional: Background color for the container */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    overflow: hidden;
+    padding: 20px;
+}
+
+.thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.inner-content h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.inner-content span {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.main-border-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.main-border-button a:hover {
+    background-color: #0056b3;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 100%; /* Limits the max width of the image */
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures the image is fully visible */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+.logo {
+    display: flex; /* Ensures proper alignment */
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center; /* Centers the logo vertically */
+    width: 100%; /* Ensures it spans the available space */
+    max-width: 200px; /* Optional: Limits the max width for the logo */
+    margin: 10px auto; /* Centers the logo with some margin */
+    text-decoration: none; /* Removes underline */
+}
+
+.logo img {
+    width: 100%; /* Makes the logo responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 150px; /* Optional: Sets a maximum width for the logo image */
+    object-fit: contain; /* Ensures the entire logo is visible */
+    display: block; /* Ensures no extra space below the image */
+}
+@media (max-width: 768px) {
+    .nav {
+      gap: 10px; /* Reduce the gap */
+      font-size: 14px; /* Adjust font size */
+    }
+  }
+
+
+        </style><!-- Templatemo style -->
+        
+    </head>
+    <body>
+        <!-- <body style="font-family: Arial, sans-serif; background-color: white; color: white; text-align: center; padding: 50px;">
+            <div class="tm-main-content" id="top">
+                <div class="tm-top-bar-bg"></div>    
+                <div class="tm-top-bar" id="tm-top-bar">
+                    <div class="container">
+                        <div class="row">
+                            <nav class="navbar navbar-expand-lg navbar-light">
+                                <a class="navbar-brand mr-auto" href="#" style="color: black;">
+                                    <img src="static/img/logo.png" alt="Site logo">
+                                    Journey
+                                </a>
+                                <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" href="/" style="color: black;">Home <span class="sr-only">(current)</span></a>
+                                      </li>
+                                      <li class="nav-item">
+                                          <a class="nav-link" href="/index" style="color: black;">Main</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link" href="/performance" style="color: black;">Performance</a>
+                                    </li>
+                                      <li class="nav-item">
+                                          <a class="nav-link" href="/chart" style="color: black;">Chart</a>
+                                      </li>
+                                     
+                                    </ul>
+                                </div>                            
+                            </nav>
+                        </div> <! row -->
+                    </div> <!-- container -->
+                </div> <!-- .tm-top-bar -->
+            </div> 
+            <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s" style="background-color: white;">
+                <div class="container">
+                  <div class="row align-items-center" style="display: flex; justify-content: space-between; align-items: center;">
+                    <!-- Logo Section -->
+                    <div class="logo-section" style="flex: 0 0 auto;gap:20px; margin-right: 25rem;">
+                      <a href="/" class="logo" style="display: inline-block;">
+                        <img src="static/assets/images/logo-v2.png" alt="" style="display: block; border: none; height: 50px; ">
+                      </a>
+                    </div>
+                    <!-- Navigation Section -->
+                    <div class="nav-section" style="flex: 1; text-align: right;">
+                      <nav class="main-nav">
+                        <ul class="nav" style="
+                          display: flex; 
+                          gap: 20px; 
+                          list-style: none; 
+                          margin: 0; 
+                          padding: 0; 
+                          align-items: center; 
+                          justify-content: flex-end; 
+                          white-space: nowrap;">
+                          <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
+                          <li class="scroll-to-section"><a href="/index">Preview</a></li>
+                          <li class="scroll-to-section"><a href="/performance">Performance</a></li>
+                          <li class="scroll-to-section"><a href="/chart">Chart</a></li>
+                          <li class="scroll-to-section"><a href="/">Logout</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              
+              
+            
+   
+    
+        <body>
+            <h1>Performance Gallery</h1>
+            <div class="container">
+                
+            <div class="container">
+                <!-- Example images -->
+                <div class="image-card">
+                    <img src="../static/confusion_matrix.png" alt="Performance Image 1">
+                    <p>confusion_matrix</p>
+                </div>
+                <div class="image-card">
+                    <img src="../static/confusion_matrix_normalized.png" alt="Performance Image 2">
+                    <p>confusion_matrix_normalized</p>
+                </div>
+                <div class="image-card">
+                    <img src="../static/F1_curve.png" alt="Performance Image 3">
+                    <p>F1_curve</p>
+                </div>
+                <div class="image-card">
+                    <img src="../static/labels_correlogram.jpg" alt="Performance Image 4">
+                    <p>labels</p>
+                </div>
+                <div class="image-card">
+                    <img src="../static/labels.jpg" alt="Performance Image 5">
+                    <p>labels_correlogram</p>
+                </div>
+                <div class="image-card">
+                    <img src="../static/P_curve.png" alt="Performance Image 6">
+                    <p>P_curve</p>
+                </div>
+                <div class="image-card">
+                    <img src="../static/PR_curve.png" alt="Performance Image 7">
+                    <p>PR_curve</p>
+                </div>
+                <div class="image-card">
+                    <img src="../static/R_curve.png" alt="Performance Image 8">
+                    <p>R_curve</p>
+                </div>
+                <div class="image-card">
+                    <img src="../static/results.png" alt="Performance Image 9">
+                    <p>results</p>
+                </div>
+            </div>
+            </div>
+        </body>
+        </html>
+        
+        <!-- Add more images as needed -->
+    </div>
+</body>
+</html>

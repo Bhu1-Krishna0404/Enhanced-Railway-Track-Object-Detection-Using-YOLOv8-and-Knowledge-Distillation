@@ -1,0 +1,7 @@
+
+path: D:/SHIVAA/CODES/OBJECTS_IN_RAILWAY_TRACK/CODE/
+train: D:/SHIVAA/CODES/OBJECTS_IN_RAILWAY_TRACK/CODE/train
+val: D:/SHIVAA/CODES/OBJECTS_IN_RAILWAY_TRACK/CODE/valid
+
+nc: 5
+names: ['car', 'person', 'rail-track', 'traffic-light', 'trains']
